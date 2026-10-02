@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Accessible focus indicators for keyboard & screen-reader navigation */
+  *:focus-visible {
+    outline: 4px solid #f59e0b !important;
+    outline-offset: 3px !important;
+  }
+}
+
+/* Contrast theme classes */
+.theme-default {
+  --bg-main: #0b1120;
+  --bg-card: #151f32;
+  --border-color: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --accent-color: #f59e0b;
+}
+
+.theme-yellow {
+  --bg-main: #000000;
+  --bg-card: #121212;
+  --border-color: #facc15;
+  --text-primary: #facc15;
+  --text-secondary: #fef08a;
+  --accent-color: #facc15;
+}
+
+.theme-light {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --border-color: #cbd5e1;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --accent-color: #d97706;
+}
+
+/* Text size scaling */
+.text-scale-normal {
+  font-size: 1rem;
+}
+
+.text-scale-large {
+  font-size: 1.15rem;
+}
+
+.text-scale-xlarge {
+  font-size: 1.35rem;
+}
+
+/* Pulsing voice glow */
+@keyframes voicePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 0 24px rgba(245, 158, 11, 0);
+  }
+}
+
+.mic-active-pulse {
+  animation: voicePulse 1.8s infinite ease-in-out;
+}

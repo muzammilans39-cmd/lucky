@@ -1,0 +1,6 @@
+{
+  "name": "AssistAI - Accessible Senior & Low-Vision Assistant",
+  "description": "An accessible AI-powered voice assistant and call analyzer for seniors and visually impaired individuals to manage daily reminders, appointments, alarms, and daily planning.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
